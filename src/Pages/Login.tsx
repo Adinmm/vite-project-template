@@ -6,7 +6,7 @@ import { LuLoader } from "react-icons/lu";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { register, handleSubmit, errors, onSubmit,isLoading  } = useLogin();
+  const { register, handleSubmit, errors, onSubmit, isLoading } = useLogin();
 
   const handleLogin = (data: LoginModelsType) => {
     console.log(data);
@@ -23,7 +23,7 @@ const Login = () => {
         />
 
         <h1 className="text-3xl font-bold text-gray-800 text-center">
-          Selamat Datang
+          Selamat Datang 
         </h1>
         <p className="text-gray-600 text-center mt-2">
           Silakan login untuk melanjutkan
@@ -85,19 +85,14 @@ const Login = () => {
           </div>
 
           <button
-                     type="submit"
-                     className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200 cursor-pointer "
-                   >
-                     <div className="flex justify-center gap-1 items-center">
-         
-                     <p className="text-base">Login</p>
-                     {isLoading &&(
-         
-                     <LuLoader className="text-lg animate-spin" />
-                     )}
-                     </div>
-         
-                   </button>
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-200 cursor-pointer "
+          >
+            <div className="flex justify-center gap-1 items-center">
+              <p className="text-base">Login</p>
+              {isLoading && <LuLoader className="text-lg animate-spin" />}
+            </div>
+          </button>
         </form>
         <p className="mt-2 w-full text-end text-sm">
           Belum Memiliki Akun ?{" "}
